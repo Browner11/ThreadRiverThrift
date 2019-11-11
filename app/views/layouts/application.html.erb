@@ -10,6 +10,23 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+     <header>
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Thread River Thrift</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Placeholder</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0" action="/search">
+        <input class="form-control mr-sm-2" name="q" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    </nav>
+    </header>
   </head>
 
   <body>
