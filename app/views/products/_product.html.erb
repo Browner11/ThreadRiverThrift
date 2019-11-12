@@ -2,7 +2,7 @@
   <div class="card product">
     <div class="card-content">
       <p class="title is-4"><%= product.name %></p>
-      <p><%= image_tag url_for(product.image) %></p>
+      <p><%= image_tag product.medium %></p>
       <ul>
         <li><strong>Price: </strong><%= product.price %></li>
         <li><strong>Size: </strong><%= product.size %></li>
