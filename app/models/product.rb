@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Product < ApplicationRecord
-  has_and_belongs_to_many :category
+  has_and_belongs_to_many :categories
 
   has_one_attached :image
   paginates_per 9
