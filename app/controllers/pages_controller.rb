@@ -1,6 +1,6 @@
 class PagesController < InheritedResources::Base
 
-  http_basic_authenticate_with name: "admin", password: "password"
+  http_basic_authenticate_with name: "admin", password: "password", except: :permalink
 
   def permalink
     @page = Page.find_by_permalink(params[:permalink])

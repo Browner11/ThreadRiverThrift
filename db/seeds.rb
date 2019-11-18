@@ -7,5 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
+Page.destroy_all
+
 Page.create(title: 'About Us', content: 'Please fill this in', permalink: 'about-us')
 Page.create(title: 'Contact', content: 'Please fill this in', permalink: 'contact')
