@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
   def search_results
     @query = params[:query]
-    @products = Product.where(name: @query)
+    @products = Product.where('name LIKE ?', "%#{@query}%")
   end
 
   # def add_to_cart
