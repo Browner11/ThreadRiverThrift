@@ -11,7 +11,8 @@ class ProductsController < ApplicationController
   end
 
   def search_results
-    
+    @query = params[:query]
+    @products = Product.where(name: @query)
   end
 
   # def add_to_cart

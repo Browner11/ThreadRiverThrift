@@ -1,0 +1,5 @@
+<p>Your search for <%= @query %> returned <%= pluralize(@products.size, 'results') %> results</p>
+
+<div class="columns is-multiline">
+<%= render @products %>
+</div>
