@@ -6,8 +6,8 @@ class Product < ApplicationRecord
   has_one_attached :image
   paginates_per 9
 
-  def thumbnail
-    image.variant(resize: '300x300!')
+  def fullsize
+    image.variant(resize: '900x900!')
   end
 
   def medium
