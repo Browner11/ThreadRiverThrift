@@ -47,7 +47,7 @@
           <%= form_with(url: search_results_products_path, method: "get", local: true) do %>
             <%= label_tag(:query, "Search for:") %>
             <%= text_field_tag(:query) %>
-            <%= select_tag :category, options_from_collection_for_select(@categories, 'id', 'name'), include_blank: "All" %>
+            <%= select_tag :category, options_from_collection_for_select(@cats, 'id', 'name'), include_blank: "All" %>
             <%= submit_tag("Search") %>
           <% end %>
         </div>

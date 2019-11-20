@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
-  # before_action :set_categories
+  before_action :set_categories
 
-  # private
+  private
 
-  # def set_categories
-  #   @cats = Category.all
-  # end
+  def set_categories
+    @cats = Category.all
+  end
 end

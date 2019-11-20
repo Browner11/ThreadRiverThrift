@@ -13,11 +13,11 @@ class ProductsController < ApplicationController
   def search_results
     @query = params[:query]
     @category = params[:category]
-   # if @category
-   #   @products = Product.where('name LIKE ? AND categories_id = ?', "%#{@query}%", "#{@category}".to_i)
-   # else
+    if @category == ""
       @products = Product.where('name LIKE ?', "%#{@query}%")
-   #ex end
+    else
+      @products = Product.joins(:categories).where('products.name LIKE ? and categories.id LIKE ?', "%#{@query}%", "#{@category}")
+    end
   end
 
   # @products = Product.joins(:categories).where('products.name LIKE ? and categories.id LIKE ?', "%#{@query}%", "#{@category}")
