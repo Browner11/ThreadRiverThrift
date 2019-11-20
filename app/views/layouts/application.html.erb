@@ -39,7 +39,7 @@
 
               <div class="navbar-dropdown">
                 <% @cats.each do |category| %>
-                  <%= link_to category.name, search_results_products_path(category.id), :class => "navbar-item" %>
+                  <%= link_to category.name, search_results_products_path(query: "", category: category.id), :class => "navbar-item" %>
                 <% end %>
               </div>
             </div>
