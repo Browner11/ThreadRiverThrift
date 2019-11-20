@@ -1,9 +1,23 @@
-<h1 class="title"><%= @product.name %></h1>
 
-<div class="columns">
-  <div class="column is-three-fifths">
+<section class="section">
+<div class="columns is-centered">
+  <div class="column is-two-fifths">
     <%= image_tag @product.fullsize %>
   </div>
   <div class="column is-two-fifths">
+    <section class="section">
+      <h1 class="title is-centered"><%= @product.name %></h1>
+    </section>
+    <section class="section">
+      <p class="is-size-5"><strong>Size: <%= @product.size %></strong></p>
+      <br>
+      <p class="is-size-5"><strong>Qty: <%= @product.quantity %></strong></p>
+      <br>
+      <p class="is-size-5"><strong>Price: <%= @product.price %></strong></p>
+    </section>
+    <section class="section">
+      <button class="button is-medium is-info">Add To Cart</button>
+    </section>
   </div>
 </div>
+</section>
