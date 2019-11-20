@@ -1,13 +1,15 @@
 <div class="column is-one-third">
-  <div class="card product">
-    <div class="card-content">
-      <p class="title is-4"><%= product.name %></p>
-      <p><%= image_tag product.medium %></p>
-      <ul>
-        <li><strong>Price: </strong><%= product.price %></li>
-        <li><strong>Size: </strong><%= product.size %></li>
-        <li><strong>Quantity: </strong><%= product.quantity %></li>
-      </ul>
+  <%= link_to product_path(product.id) do %>
+    <div class="card product">
+      <div class="card-content">
+        <p class="title is-4"><%= product.name %></p>
+        <p><%= image_tag product.medium %></p>
+        <ul>
+          <li><strong>Price: </strong><%= product.price %></li>
+          <li><strong>Size: </strong><%= product.size %></li>
+          <li><strong>Quantity: </strong><%= product.quantity %></li>
+        </ul>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
